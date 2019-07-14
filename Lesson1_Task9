@@ -1,0 +1,10 @@
+public class MyJavaApp {
+      public static void main(String[] args) {
+          int f = 1, b = 2, c = 0;
+          c = f;
+          f = b;
+          b = c;
+          System.out.println(f);
+          System.out.println(b);
+    }
+}
