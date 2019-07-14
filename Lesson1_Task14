@@ -1,0 +1,14 @@
+public class MyJavaApp {
+      public static void main(String[] args) {
+          int a=2;
+          int b=5;
+          int i=0;
+          if (a > b);{
+          i= a+3;
+              System.out.println(" Number 1 to 100: " +i);}
+           else {
+          b+=8;}
+          System.out.println(" Number 1 to 100: " +a);
+          System.out.println(" Number 1 to 100: " +b);
+     }
+}
