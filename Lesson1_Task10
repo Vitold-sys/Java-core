@@ -1,0 +1,9 @@
+public class MyJavaApp {
+      public static void main(String[] args) {
+          int f = 1, c = 2,
+          b = c +f;
+          System.out.println(f);
+          System.out.println(c);
+          System.out.println(b);
+     }
+}
