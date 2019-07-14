@@ -1,0 +1,8 @@
+public class MyJavaApp {
+      public static void main(String[] args) {
+          String i="lol";
+          String f="lol";
+          String c=i + f;
+          System.out.println("Meaning: " +c);
+    }
+}
