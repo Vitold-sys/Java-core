@@ -1,0 +1,18 @@
+package Myfirstapp;
+
+import java.util.Arrays;
+
+public class MyJavaApp {
+    public static void main(String[] args) {
+        int Lol1[][] = {
+                {18, 20, 30},
+                {20, 30, 0}
+        };
+        for (int[] anInt : Lol1) {
+            for (int i : anInt) {
+                double p = i*1.1;
+                System.out.println("Matrix" + p);
+            }
+        }
+    }
+}
