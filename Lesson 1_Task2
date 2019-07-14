@@ -1,0 +1,16 @@
+package Myfirstapp;
+
+public class MyJavaApp {
+      public static void main(String[] args) {
+          int Lol1[][] = {
+                  {1, 2, 3},
+                  {2, 3, 0}
+          };
+      for (int[] anInt : Lol1) {
+           for (int i : anInt) {
+           double p=i*0.1;
+           System.out.println("Matrix" + p);
+           }
+           }
+      }
+}
