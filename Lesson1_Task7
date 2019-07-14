@@ -1,0 +1,11 @@
+package Myfirstapp;
+
+public class MyJavaApp {
+      public static void main(String[] args) {
+         int sum=0;
+         for (int k=20; k<199; k++) {
+             sum+=k;
+         }
+             System.out.println("For interation: " +sum);
+     }
+}
