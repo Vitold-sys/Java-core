@@ -1,0 +1,8 @@
+public class MyJavaApp {
+    public static void main(String[] args) {
+            double curs = 2.02;
+            double rub = 200;
+            double usd = rub / curs;
+            System.out.println("Sum:" + usd);
+      }
+}
