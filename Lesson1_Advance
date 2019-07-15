@@ -1,0 +1,14 @@
+package Myfirstapp;
+
+import java.util.Scanner;
+
+public class MyJavaApp {
+    public static void main(String[] args) {
+            System.out.print("Input number of days: ");
+            int days = new Scanner(System.in).nextInt();
+            convert(days);
+        }
+        static void convert ( int days){
+            System.out.println("In " + days + " days: " + days * 24 + " hours, " + days * 1440 + " minutes, " + days * 86400 + " seconds.");
+    }
+}
