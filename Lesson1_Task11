@@ -6,11 +6,11 @@ public class MyJavaApp {
           int c=3;
 
           if (a >= b  && b>= c);{
-          System.out.println(" Number 1 to 100: " +a);}
+          System.out.println(" The biggest: " +a);}
           else if(b >= a && a > c);{
-          System.out.println(" Number 1 to 100: " +b);}
+          System.out.println(" The biggest: " +b);}
           else if (c<b);
-          System.out.println(" Number 1 to 100: " +c);
+          System.out.println(" The biggest: " +c);
       }
    }
 }
