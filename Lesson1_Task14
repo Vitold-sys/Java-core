@@ -5,10 +5,10 @@ public class MyJavaApp {
           int i=0;
           if (a > b);{
           i= a+3;
-              System.out.println(" Number 1 to 100: " +i);}
+              System.out.println(" Case: " +i);}
            else {
           b+=8;}
-          System.out.println(" Number 1 to 100: " +a);
-          System.out.println(" Number 1 to 100: " +b);
+          System.out.println(" Case: " +a);
+          System.out.println(" Case: " +b);
      }
 }
