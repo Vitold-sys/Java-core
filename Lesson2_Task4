@@ -1,0 +1,24 @@
+package Myfirstapp;
+
+import java.util.Arrays;
+
+public class MyJavaApp {
+    public static void main(String[] args) {
+    int[] anArray;
+            anArray = new int[6];
+            anArray[0] = 100;
+            anArray[1] = 10;
+            anArray[2] = 20;
+            anArray[3] = 30;
+            anArray[4] = 40;
+            anArray[5] = 50;
+                    int myArray[] = {3,5,7,12};
+        int n = 0;
+        int sum=0;
+        for(int i=0; i<myArray.length; i++) {
+            sum=sum+myArray[i];
+            n=sum/myArray.length;
+        }
+        System.out.println(n);
+    }
+}
