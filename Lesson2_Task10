@@ -1,0 +1,10 @@
+public class MyJavaApp {
+    public static void main(String[] args) {
+    int [] array = {12,1,5,7,13, -1, -5};
+    int max = 0;
+        for(int j = 0; j<array.length; j++){
+        if(max<array[j])
+            max = array[j];
+    }
+        System.out.println("Max: "+max);
+}
