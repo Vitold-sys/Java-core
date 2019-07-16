@@ -1,0 +1,29 @@
+public class ArrayApp {
+public static void main(String[] args) {
+                 int nElems = 0;      
+                int j;              
+                long searchKey;      
+
+               long arr[] = {3,5,7,12};
+                nElems = 4; 
+
+                
+                for (j = 0; j < nElems; j++)
+                    System.out.print(arr[j] + " ");
+                System.out.println("");
+
+                searchKey = 55;                      
+                for (j = 0; j < nElems; j++)    { 
+                    if (arr[j] == searchKey)
+                        break;
+                }
+                for (int k = j; k < nElems - 1; k++) 
+                    arr[k] = arr[k + 1];
+                nElems--;                            
+
+                for (j = 0; j < nElems; j++)     {   
+                    System.out.print(arr[j] + " ");
+                System.out.println("");
+                }
+        }
+}
