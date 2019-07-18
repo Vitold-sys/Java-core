@@ -1,0 +1,18 @@
+import java.util.*;
+
+class GFG
+{
+    public static void main (String[] args)
+    {
+        String[] lang = {"C++", "C#",
+                "Java", "JavaScript"};
+
+        List<String> al =
+                new ArrayList<String>(Arrays.asList(lang));
+        System.out.println(al);
+        
+        al.add("PHP");
+        al.add("Python");
+        System.out.println("ArrayList" + al);
+    }
+}
