@@ -1,0 +1,45 @@
+package Autoparts.lesson04;
+
+import Autoparts.Seat;
+
+public class Demo {
+    public static void main(String[] args) {
+        Door door1 = new Door(1, 600, "AMGDoor1");
+        Door door2 = new Door(2, 800, "AMGDoor2");
+
+        Engine engine1 = new Engine(1, 7000, "AMGEngine1");
+        Engine engine2 = new Engine(2, 10000, "AMGEngine2");
+
+        Wheel wheel1 = new Wheel(1, 400, "AMGWheel1");
+        Wheel wheel2 = new Wheel(2, 600, "AMGWheel2");
+
+        Body body1 = new Body(1, 5000, "AMGBody1");
+        Body body2 = new Body(2, 6000, "AMGBody2");
+
+        Gearbox gearbox1 = new Gearbox(1,5000, "AMGGearbox1");
+        Gearbox gearbox2 = new Gearbox(2,7000, "AMGGearbox2");
+
+
+        Car car1 = new Car(door1, engine1, wheel1, body1, gearbox1);
+        Car car2 = new Car(door2, engine2, wheel2, body2, gearbox2);
+
+        Util util = new Util();
+        System.out.println("Стоимость оригинальных запчастей: ");
+        System.out.println("Название запчасти: " + engine1.getEngineModel() + ", Цена: " + engine1.getPrice());
+        System.out.println("Название запчасти: " + door1.getDoorModel() + ", Цена: " + door1.getPrice());
+        System.out.println("Название запчасти: " + wheel1.getWheelModel() + ", Цена: " + wheel1.getPrice());
+        System.out.println("Название запчасти: " + gearbox1.getGearboxModel() + ", Цена: " + gearbox1.getPrice());
+
+        System.out.println("Стоимость запчастей - аналогов: ");
+        System.out.println("Название запчасти: " + engine2.getEngineModel() + ", Цена: " + engine2.getPrice());
+        System.out.println("Название запчасти: " + door2.getDoorModel() + ", Цена: " + door2.getPrice());
+        System.out.println("Название запчасти: " + wheel2.getWheelModel() + ", Цена: " + wheel2.getPrice());
+        System.out.println("Название запчасти: " + gearbox2.getGearboxModel() + ", Цена: " + gearbox2.getPrice());
+
+        System.out.println("Название запчасти: " + body1.getBodyModel() + ", Цена: " + body1.getPrice());
+        System.out.println("Стоимость автомобиля: " + util.carPrice(car1));
+        System.out.println("Название фирмы производителя: " + util.carFirm);
+        System.out.println("Название модели: " + util.carModel);
+        System.out.println("Стоимость автомобиля после ремонта: " + util.carPrice(car2));
+    }
+}
