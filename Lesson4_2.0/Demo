@@ -2,35 +2,43 @@ package Autoparts.lesson04;
 
 import Autoparts.Seat;
 
-public class Demo {
+public class Demo{
     public static void main(String[] args) {
-        Door door1 = new Door(1, 600, "AMGDoor1");
-        Door door2 = new Door(2, 800, "AMGDoor2");
 
-        Engine engine1 = new Engine(1, 7000, "AMGEngine1");
-        Engine engine2 = new Engine(2, 10000, "AMGEngine2");
 
-        Wheel wheel1 = new Wheel(1, 400, "AMGWheel1");
-        Wheel wheel2 = new Wheel(2, 600, "AMGWheel2");
+        Door door1 = new Door(1, 600, "AMG Door1");
+        Door door2 = new Door(2, 800, "AMG Door2");
 
-        Body body1 = new Body(1, 5000, "AMGBody1");
-        Body body2 = new Body(2, 6000, "AMGBody2");
+        Engine engine1 = new Engine(1, 7000, "AMG Engine1");
+        Engine engine2 = new Engine(2, 10000, "AMG Engine2");
 
-        Gearbox gearbox1 = new Gearbox(1,5000, "AMGGearbox1");
-        Gearbox gearbox2 = new Gearbox(2,7000, "AMGGearbox2");
+        Wheel wheel1 = new Wheel(1, 400, "AMG Wheel1");
+        Wheel wheel2 = new Wheel(2, 600, "AMG Wheel2");
+
+        Body body1 = new Body(1, 5000, "AMG Body1");
+        Body body2 = new Body(2, 6000, "AMG Body2");
+
+        Gearbox gearbox1 = new Gearbox(1,5000, "AMG Gearbox1");
+        Gearbox gearbox2 = new Gearbox(2,7000, "AMG Gearbox2");
 
 
         Car car1 = new Car(door1, engine1, wheel1, body1, gearbox1);
         Car car2 = new Car(door2, engine2, wheel2, body2, gearbox2);
+        car1.getInfo();
+        car1.typeOfVihicle();
+        car1.gasEngine();
 
         Util util = new Util();
-        System.out.println("Стоимость оригинальных запчастей: ");
+
+        //Print from interface KindOfPart
+        car1.kindOfPart();
         System.out.println("Название запчасти: " + engine1.getEngineModel() + ", Цена: " + engine1.getPrice());
         System.out.println("Название запчасти: " + door1.getDoorModel() + ", Цена: " + door1.getPrice());
         System.out.println("Название запчасти: " + wheel1.getWheelModel() + ", Цена: " + wheel1.getPrice());
         System.out.println("Название запчасти: " + gearbox1.getGearboxModel() + ", Цена: " + gearbox1.getPrice());
 
-        System.out.println("Стоимость запчастей - аналогов: ");
+        //Print from interface KindOfPart
+        car1.kindOfPart1();
         System.out.println("Название запчасти: " + engine2.getEngineModel() + ", Цена: " + engine2.getPrice());
         System.out.println("Название запчасти: " + door2.getDoorModel() + ", Цена: " + door2.getPrice());
         System.out.println("Название запчасти: " + wheel2.getWheelModel() + ", Цена: " + wheel2.getPrice());
@@ -38,8 +46,17 @@ public class Demo {
 
         System.out.println("Название запчасти: " + body1.getBodyModel() + ", Цена: " + body1.getPrice());
         System.out.println("Стоимость автомобиля: " + util.carPrice(car1));
-        System.out.println("Название фирмы производителя: " + util.carFirm);
-        System.out.println("Название модели: " + util.carModel);
+        System.out.println("Название фирмы производителя: " + Car.getCarFirm());
+        System.out.println("Название модели: " + Car.getCarModel());
         System.out.println("Стоимость автомобиля после ремонта: " + util.carPrice(car2));
+
+        MercedesBenz a = new MercedesBenz("A-class", "Hetch");
+        MercedesBenz b = new MercedesBenz("B-class", "Hetch");
+        MercedesBenz c = new MercedesBenz("C-class", "Sedan");
+        a.kindOfPart();
+        System.out.println(a.getModel() + ", Тип кузова: " + a.getTypeOfBody());
+        System.out.println(b.getModel() + ", Тип кузова: " + b.getTypeOfBody());
+        System.out.println(c.getModel() + ", Тип кузова: " + c.getTypeOfBody());
+
     }
 }
