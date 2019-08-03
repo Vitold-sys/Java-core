@@ -1,0 +1,59 @@
+package Autoparts.lesson04;
+
+import java.util.Objects;
+
+public class MercedesBenz extends Car{
+    private String Model;
+    private String TypeOfBody;
+
+    public MercedesBenz(String model, String typeOfBody) {
+        Model = model;
+        TypeOfBody = typeOfBody;
+    }
+
+    public String getModel() {
+        return Model;
+    }
+
+    public void setModel(String model) {
+        Model = model;
+    }
+
+    public String getTypeOfBody() {
+        return TypeOfBody;
+    }
+
+    public void setTypeOfBody(String typeOfBody) {
+        TypeOfBody = typeOfBody;
+    }
+    @Override
+    //Method from Car
+    public void kindOfPart(){
+        System.out.println("Запчасти подходят для: ");
+
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+        MercedesBenz that = (MercedesBenz) o;
+        return Objects.equals(Model, that.Model) &&
+                Objects.equals(TypeOfBody, that.TypeOfBody);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), Model, TypeOfBody);
+    }
+
+    @Override
+    public String toString() {
+        return "MercedesBenz{" +
+                "Model='" + Model + '\'' +
+                ", TypeOfBody='" + TypeOfBody + '\'' +
+                '}';
+    }
+
+}
