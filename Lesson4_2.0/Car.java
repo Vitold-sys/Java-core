@@ -2,12 +2,14 @@ package Autoparts.lesson04;
 
 import java.util.Objects;
 
-public class Car {
+public class Car extends Vehicle implements Info{
     private Door door;
     private Engine engine;
     private Wheel wheel;
     private Body body;
     private Gearbox gearbox;
+    private static String carFirm = "Mercedes-benz";
+    private static String carModel = "AMG";
 
     public Car() {
     }
@@ -19,6 +21,14 @@ public class Car {
         this.body = body;
         this.gearbox = gearbox;
     }
+    //Method from abstract class Vehicle
+    public void typeOfVihicle() {
+        System.out.println("Раздел автомобили");
+    }
+    //Method from abstract class Vehicle
+    public void getInfo() {
+        System.out.println("Подсчет стоимости автомобиля!");
+        }
 
     public Door getDoor() {
         return door;
@@ -58,6 +68,36 @@ public class Car {
 
     public void setGearbox(Gearbox gearbox) {
         this.gearbox = gearbox;
+    }
+
+    public static String getCarFirm() {
+        return carFirm;
+    }
+
+    public static void setCarFirm(String carFirm) {
+        Car.carFirm = carFirm;
+    }
+
+    public static String getCarModel() {
+        return carModel;
+    }
+
+    public static void setCarModel(String carModel) {
+        Car.carModel = carModel;
+    }
+//Method from interface Info
+    public void gasEngine (){
+        System.out.println("Машина с бензиновым двигателем");
+    }
+
+    //Method from interface KindOfPart
+    public void kindOfPart(){
+        System.out.println("Стоимость оригинальных запчастей: ");
+
+    }
+    //Method from interface KindOfPart
+    public void kindOfPart1() {
+        System.out.println("Стоимость запчастей - аналогов: ");
     }
 
     @Override
