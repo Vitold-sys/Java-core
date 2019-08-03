@@ -1,0 +1,6 @@
+package Autoparts.lesson04;
+
+public interface Info {
+    //to get type of engine
+    public void gasEngine ();
+}
