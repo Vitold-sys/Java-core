@@ -1,0 +1,5 @@
+package Autoparts.lesson04;
+
+public interface KindOfPart {
+    public void kindOfPart();
+}
