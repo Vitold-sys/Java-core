@@ -23,7 +23,7 @@ class Lesson8 {
 
         for(Book p : list1){
 
-            System.out.println(p.getBookname());
+            System.out.println(p.getBookname());//Print all book names
         }
     }
 }
