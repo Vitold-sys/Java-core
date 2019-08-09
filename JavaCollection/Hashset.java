@@ -64,4 +64,4 @@ public class Hashset {
             System.out.println("Surname: " + p.getSur() + ", Name: " + p.getNam() + ", Otchestvo: " + p.getOtch());
         }
     }
-}
+} 
