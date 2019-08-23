@@ -18,3 +18,4 @@ class PeopleQueue extends Thread    {
         }
     }
 }
+
