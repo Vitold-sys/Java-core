@@ -8,13 +8,12 @@ import java.util.Scanner;
 public class Main {
     static String[] SENTENCE;
 
-    public static void main(String []args) throws Exception{
+    public static void main(String []args) throws Exception {
 
         Scanner sentence = new Scanner(new File("text1.txt"));
         ArrayList<String> sentenceList = new ArrayList<String>();
 
-        while (sentence.hasNextLine())
-        {
+        while (sentence.hasNextLine()) {
             sentenceList.add(sentence.nextLine());
         }
 
@@ -22,18 +21,20 @@ public class Main {
 
         String[] sentenceArray = sentenceList.toArray(new String[sentenceList.size()]);
 
-        for (int r=0;r<sentenceArray.length;r++)
-        {
+        for (int r = 0; r < sentenceArray.length; r++) {
             SENTENCE = sentenceArray[r].split("(?<=[.!?])\\s*");
-            for (int i=0;i<SENTENCE.length;i++)
-            {
-                System.out.println("Предложение " + (i+1) + ": " + SENTENCE[i]);
+            for (int i = 0; i < SENTENCE.length; i++) {
+                System.out.println("Предложение " + (i + 1) + ": " + SENTENCE[i]);
             }
 
         }
-        for (int r=0;r<sentenceArray.length;r++){
-            System.out.println("Количество предложений: " + r);
+        int z = 0;
+        for (int r = 0; r < sentenceArray.length; r++) {
+            z = r;
         }
+
+        System.out.println("Количество предложений: " + z);
     }
-    }
+}
+
 
