@@ -31,7 +31,8 @@ public class Main {
             }
 
         }
-
+        for (int r=0;r<sentenceArray.length;r++){
+            System.out.println("Количество предложений: " + r);
+        }
     }
     }
-
