@@ -27,7 +27,7 @@ public class Main {
             SENTENCE = sentenceArray[r].split("(?<=[.!?])\\s*");
             for (int i=0;i<SENTENCE.length;i++)
             {
-                System.out.println("Sentence " + (i+1) + ": " + SENTENCE[i]);
+                System.out.println("Предложение " + (i+1) + ": " + SENTENCE[i]);
             }
 
         }
